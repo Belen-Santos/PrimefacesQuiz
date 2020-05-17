@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"     
+xmlns:h="http://java.sun.com/jsf/html"     
+xmlns:f="http://java.sun.com/jsf/core"     
+xmlns:p="http://primefaces.org/ui">           
+<h:head>     
+</h:head>       
+<h:body> 
+ <h1>JSF-QUIZ</h1>             
+
+<h:form>
+
+<h:panelGroup rendered="#{preguntaController.esPasoInicial}" >
+<h3>Introduzca su nombre, por favor:</h3>
+<p:inputText value="#{preguntaController.nombreUsuario}"/>
+</h:panelGroup>
+
+<h:panelGroup rendered="#{preguntaController.esPasoIntermedio}" >
+<h3><h:outputLink value="#{preguntaController.preguntaActual.link}"><h:outputText value="#{preguntaController.preguntaActual.texto}" /></h:outputLink></h3>
+<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5"> 
+		<h:outputText value="Seleccione una opción:" />
+         <p:selectOneButton value="#{preguntaController.opcionSeleccionada}">             
+	 <f:selectItems value="#{preguntaController.preguntaActual.opciones}" var="unaOpcion"
+              itemLabel="#{unaOpcion.texto}" itemValue="#{unaOpcion.id}" />
+         </p:selectOneButton>
+  </h:panelGrid>
+</h:panelGroup>
+
+<h:panelGroup rendered="#{preguntaController.esPasoFinal}">
+<p:dataTable var="pregunta" value="#{preguntaController.preguntas}">
+    <p:column headerText="Pregunta">
+        <h:outputText value="#{pregunta.texto}" />
+    </p:column>
+    <p:column headerText="Respuesta Correcta">
+        <h:outputText value="#{pregunta.correcta}" />
+    </p:column>  
+    <p:column headerText="Su Respuesta">
+        <h:outputText value="#{pregunta.resp}" />
+    </p:column>
+</p:dataTable> 
+<h3><h:outputText value="#{preguntaController.mensajeFinal}"/></h3> 
+</h:panelGroup>
+
+<p><p:commandButton value="Siguiente" id="siguiente" action="#{preguntaController.siguientePaso}" style="margin-right:20px;" ajax="false" /></p>
+
+</h:form>
+</h:body> 
+</html>
