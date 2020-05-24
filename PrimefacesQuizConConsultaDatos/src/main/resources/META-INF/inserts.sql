@@ -1,0 +1,4 @@
+INSERT INTO PREGUNTA (id,texto,link,op1,op2,op3,correcta) VALUES (1,'Autor del lenguaje','http://servidor.iespoligonosur.org/Materiales/Modulos/ED/fotos/b1.jpg','python','ruby','ninguna','ninguna');
+INSERT INTO PREGUNTA (id,texto,link,op1,op2,op3,op4,op5,correcta) VALUES (2,'Quién descubrió América','https://www.xlsemanal.com/wp-content/uploads/sites/3/2017/07/colon-descubrimiento-America.jpg','rebeca','lopera','Colón','Berta','ninguna','Colón');
+INSERT INTO PREGUNTA (id,texto,link,op1,op2,op3,correcta) VALUES (3,'Luego del puente estaremos en','https://fotos02.deia.eus/2020/05/11/690x278/terrazas-ledesma-fase1.jpg','julio','marzo', 'abril','marzo');
+INSERT INTO PREGUNTA (id,texto,link,op1,op2,op3,op4,correcta) VALUES (4,'Autor del lenguaje Python','https://www.linuxadictos.com/wp-content/uploads/guido-van-rossum-1024x683.png','Lopera','Guildo', 'abril', 'Van Rossum','Van Rossum');
