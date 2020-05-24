@@ -22,6 +22,6 @@ Requerimientos -->
   - MySQL
   
 Puesta en marcha --> 
-  - Introducir los datos de resultados.sql tal y como están los comandos en este fichero.
+  - Introducir los datos de resultados.sql tal y como están los comandos en este fichero dentro de MySQL.
   - Ejecución a través de maven con el servidor Jetty con el comando "mvn jetty:run" (también posible su ejecución con otros servidores como Tomcat).
   - En navegador introducir "http://localhost:9999/visualizacion.xhtml" 
